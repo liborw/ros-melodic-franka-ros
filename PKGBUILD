@@ -9,6 +9,7 @@ url="http://wiki.ros.org/franka_ros"
 license=('Apache 2.0')
 
 makedepends=(
+'cmake'
 )
 
 depends=(

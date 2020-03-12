@@ -5,6 +5,7 @@ pkgbase = ros-melodic-franka-ros
 	url = http://wiki.ros.org/franka_ros
 	arch = x86_64
 	license = Apache 2.0
+	makedepends = cmake
 	depends = ros-melodic-franka-control
 	depends = ros-melodic-franka-description
 	depends = ros-melodic-franka-example-controllers
