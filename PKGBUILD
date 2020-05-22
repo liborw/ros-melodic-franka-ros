@@ -1,6 +1,6 @@
 pkgname='ros-melodic-franka-ros'
 pkgver='0.6.0'
-pkgrel=1
+pkgrel=2
 pkgdesc='franka_ros is metapackage for all Franka Emika ROS packages'
 arch=('i686' 'x86_64' 'aarch64' 'armv7h' 'armv6h')
 url="http://wiki.ros.org/franka_ros"
