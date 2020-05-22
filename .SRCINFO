@@ -1,23 +1,21 @@
 pkgbase = ros-melodic-franka-ros
-	pkgdesc = franka_ros is a metapackage for all Franka Emika ROS packages
+	pkgdesc = franka_ros is metapackage for all Franka Emika ROS packages
 	pkgver = 0.6.0
 	pkgrel = 1
 	url = http://wiki.ros.org/franka_ros
+	arch = i686
 	arch = x86_64
+	arch = aarch64
+	arch = armv7h
+	arch = armv6h
 	license = Apache 2.0
 	makedepends = cmake
-	depends = ros-melodic-franka-control
-	depends = ros-melodic-franka-description
-	depends = ros-melodic-franka-example-controllers
-	depends = ros-melodic-franka-gripper
-	depends = ros-melodic-franka-hw
-	depends = ros-melodic-franka-msgs
-	depends = ros-melodic-franka-visualization
-	depends = ros-melodic-panda-moveit-config
+	makedepends = ros-build-tools
+	makedepends = ros-melodic-catkin
 	provides = ros-melodic-franka-ros
 	conflicts = ros-melodic-franka-ros
-	source = ros-melodic-franka-ros-0.6.0.tar.gz::https://github.com/frankaemika/franka_ros-release/archive/release/melodic/franka_ros/0.6.0-1.tar.gz
-	md5sums = b1fc2b4a9e6e0fb076f0b95e5b5857e3
+	source = ros-melodic-franka-ros-0.6.0.tar.gz::https://github.com/frankaemika/franka_ros/archive/0.6.0.tar.gz
+	sha256sums = 6bfc7f743569e7491d44b82e1b9c39ace55881b7f42e4952e202e13d1e70a6b9
 
 pkgname = ros-melodic-franka-ros
 

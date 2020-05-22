@@ -1,18 +1,22 @@
-
-# Maintainer: 
-pkgname="ros-melodic-franka-ros"
-pkgver="0.6.0"
+pkgname='ros-melodic-franka-ros'
+pkgver='0.6.0'
 pkgrel=1
-pkgdesc="franka_ros is a metapackage for all Franka Emika ROS packages"
-arch=('x86_64')
+pkgdesc='franka_ros is metapackage for all Franka Emika ROS packages'
+arch=('i686' 'x86_64' 'aarch64' 'armv7h' 'armv6h')
 url="http://wiki.ros.org/franka_ros"
 license=('Apache 2.0')
 
-makedepends=(
-'cmake'
+ros_makedepends=(
+'ros-melodic-catkin'
 )
 
-depends=(
+makedepends=(
+'cmake'
+'ros-build-tools'
+${ros_makedepends[@]}
+)
+
+ros_depend=(
 'ros-melodic-franka-control'
 'ros-melodic-franka-description'
 'ros-melodic-franka-example-controllers'
@@ -23,11 +27,16 @@ depends=(
 'ros-melodic-panda-moveit-config'
 )
 
+depends=(
+${ros_depends[@]}
+)
+
 provides=($pkgname)
 conflicts=($pkgname)
-_dir="franka_ros-release-release-melodic-franka_ros-0.6.0-1"
-source=("$pkgname-$pkgver.tar.gz::https://github.com/frankaemika/franka_ros-release/archive/release/melodic/franka_ros/0.6.0-1.tar.gz")
-md5sums=('b1fc2b4a9e6e0fb076f0b95e5b5857e3')
+
+_dir="franka_ros-$pkgver/franka_ros"
+source=("$pkgname-$pkgver.tar.gz::https://github.com/frankaemika/franka_ros/archive/$pkgver.tar.gz")
+sha256sums=(6bfc7f743569e7491d44b82e1b9c39ace55881b7f42e4952e202e13d1e70a6b9)
 
 build() {
 	# Use ROS environment variables
